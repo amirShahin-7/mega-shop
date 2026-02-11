@@ -11,7 +11,7 @@ export async function checkoutSessionAction(
   try {
     const token = await getUserToken();
     const { data } = await axios.post(
-      `${process.env.API_URL}/orders/checkout-session/${cartId}?url=http://localhost:3000`,
+      `${process.env.API_URL}/orders/checkout-session/${cartId}?url=https://mega-shop-liard.vercel.app`,
       shippingAddress,
       {
         headers: {
