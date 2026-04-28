@@ -10,7 +10,7 @@ export default function FooterAccount() {
       </h3>
       <ul className="space-y-4">
         <FooterLink href="/profile/settings" label="My Profile" />
-        <FooterLink href="/profile/orders" label="Order History" />
+        <FooterLink href="/profile/allorders" label="Order History" />
         <FooterLink href="/profile/favorites" label="Wishlist" />
         <FooterLink href="/profile/addresses" label="My Addresses" />
         <FooterLink href="/" label="Help Center" />

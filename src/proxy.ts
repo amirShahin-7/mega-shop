@@ -5,11 +5,10 @@ const protectedPages = [
   "/cart",
   "/profile",
   "/profile/settings",
-  "/profile/orders",
+  "/profile/allorders",
   "/profile/favorites",
   "/profile/addresses",
   "/checkout",
-  "/allorders"
 ];
 const authPages = [
   "/login",

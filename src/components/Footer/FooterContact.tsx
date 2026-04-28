@@ -11,8 +11,6 @@ export default function FooterContact() {
         <li className="flex items-start gap-3 text-sm text-gray-500">
           <MapPin className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />
           <span>
-            123 Commerce St, Tech City,
-            <br />
             Cairo, Egypt
           </span>
         </li>

@@ -48,7 +48,7 @@ export default function ShippingForm({ cartId }: ShippingFormProps) {
         if ("status" in result && result.status === "success") {
           toast.success("Order placed successfully!");
           await refreshCart();
-          router.push("/profile/orders");
+          router.push("/profile/allorders");
         } else {
           const msg =
             "message" in result ? result.message : "Failed to place order";

@@ -9,7 +9,6 @@ import { toast } from "react-toastify";
 export default function Newsletter() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     toast.success("Thank you for subscribing!");
   };
 
@@ -48,10 +47,10 @@ export default function Newsletter() {
             />
             <Button
               type="submit"
-              className="h-12 rounded-full px-8 bg-sky-600 hover:bg-sky-500 text-white font-semibold shadow-lg hover:shadow-sky-500/25 transition-all duration-300 group"
+              className="h-12 rounded-full px-8 bg-sky-600 hover:bg-sky-500 text-white font-semibold shadow-lg hover:shadow-sky-500/25 transition-all cursor-pointer duration-300 group"
             >
               Subscribe
-              <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <Send className="size-4 group-hover:size-5 transition-all" />
             </Button>
           </form>
 

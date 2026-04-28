@@ -40,28 +40,28 @@ export default function FavoriteIcon({
         disabled={isProcessing || isLoadingIcon}
         onClick={handleToggle}
         size={"lg"}
-        className={`flex items-center justify-center group  gap-2 w-full rounded-xl font-semibold cursor-pointer border-2 border-red-200  hover:bg-red-50 transition-all group ${
+        className={`flex items-center justify-center group w-full rounded-xl font-semibold cursor-pointer border-2 border-red-200 hover:bg-red-50 transition-all overflow-hidden ${
           isFavorite ? "bg-red-200 " : " text-red-500 "
         }${isProcessing && "opacity-50 cursor-not-allowed"}`}
       >
-        <div
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl transition-all`}
-        >
+        <div className="flex items-center gap-1.5 sm:gap-2 rounded-xl transition-all min-w-0">
           {isProcessing ? (
             <Loader2 size={20} className="animate-spin" />
           ) : (
-            <Heart
-              size={20}
-              fill={isFavorite ? "currentColor" : "none"}
-              className={`${
-                isFavorite && "text-red-500"
-              } group-hover:animate-ping duration-1000 transition-all`}
-            />
+            <>
+              <Heart
+                size={20}
+                fill={isFavorite ? "currentColor" : "none"}
+                className={`shrink-0 ${
+                  isFavorite && "text-red-500"
+                } group-hover:animate-ping duration-1000 transition-all`}
+              />
+              <span className="text-red-800 text-xs sm:text-sm truncate">
+                {isFavorite ? "In Wishlist" : "Add to Wishlist"}
+              </span>
+            </>
           )}
         </div>
-        <span className="text-sm text-red-800">
-          {isFavorite ? "In Wishlist" : "Add to Wishlist"}
-        </span>
       </Button>
     );
   }

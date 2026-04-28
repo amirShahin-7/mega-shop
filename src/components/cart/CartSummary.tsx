@@ -66,7 +66,7 @@ export default function CartSummary() {
       <div className="grid grid-cols-2 gap-3 pt-2">
         <Link
           href={"/products"}
-          className="w-full border rounded-xl text-sm flex items-center justify-center text-gray-600 border-gray-200"
+          className="border rounded-xl text-sm flex items-center text-center justify-center text-gray-600 border-gray-200"
         >
           Continue Shopping
         </Link>

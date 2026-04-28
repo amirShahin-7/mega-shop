@@ -22,7 +22,7 @@ const sidebarLinks = [
   },
   {
     title: "My Orders",
-    href: "/profile/orders",
+    href: "/profile/allorders",
     icon: Package,
   },
   {

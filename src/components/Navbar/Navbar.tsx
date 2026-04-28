@@ -39,9 +39,9 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm transition-all duration-300">
-        <section className="flex flex-wrap md:space-y-4 xl:space-y-0 md:items-center justify-between md:justify-center lg:justify-between items-center px-4 py-3 md:max-w-[85%] mx-auto transition-all">
+        <section className="flex flex-wrap md:space-y-4 xl:space-y-0 md:items-center justify-between md:justify-center lg:justify-between items-center px-2 sm:px-4 py-3 md:max-w-[85%] mx-auto transition-all">
           {/* Left Side: Logo & Search */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-0 sm:gap-6">
             <Link href={"/"} className="flex items-center gap-2 group">
               <span className="bg-sky-600 p-2 rounded-xl text-white font-bold text-sm shadow-lg shadow-sky-200 group-hover:scale-105 transition-transform duration-300">
                 M

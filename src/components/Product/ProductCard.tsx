@@ -68,7 +68,7 @@ export const SingleProductCard = ({ product }: { product: ProductI }) => {
         </div>
 
         {/* Action Buttons */}
-        <div className="absolute top-2 right-2 flex flex-col gap-1.5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+        <div className="absolute top-2 right-2 flex flex-col gap-1.5 sm:opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 sm:translate-x-2 group-hover:translate-x-0">
           <FavoriteIcon productId={product._id} />
 
           <Tooltip>

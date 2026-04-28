@@ -11,7 +11,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
     product.priceAfterDiscount && product.priceAfterDiscount < product.price;
   const discountPercentage = hasDiscount
     ? Math.round(
-        ((product.price - product.priceAfterDiscount!) / product.price) * 100
+        ((product.price - product.priceAfterDiscount!) / product.price) * 100,
       )
     : 0;
 
@@ -63,7 +63,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       </h1>
 
       {/* Rating & Reviews */}
-      <div className="flex items-center gap-4">
+      <div className="flex flex-wrap items-center gap-4">
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1">{renderStars(rating)}</div>
           <span className="text-sm font-semibold text-gray-700">
@@ -72,8 +72,8 @@ export default function ProductInfo({ product }: ProductInfoProps) {
         </div>
         {product.ratingsQuantity > 0 && (
           <span className="text-sm text-gray-500">
-            ({product.ratingsQuantity}{" "}
-            {product.ratingsQuantity === 1 ? "review" : "reviews"})
+            ({product.ratingsQuantity}
+            {product.ratingsQuantity === 1 ? " review" : " reviews"})
           </span>
         )}
       </div>
@@ -103,7 +103,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
 
       {/* Stock & Sold Info */}
       <div className="grid grid-cols-2 gap-4">
-        <div className="flex items-center gap-3 p-4 bg-green-50 rounded-xl border border-green-200">
+        <div className="flex flex-wrap items-center gap-3 p-4 bg-green-50 rounded-xl border border-green-200">
           <div className="bg-green-500 p-2 rounded-lg">
             <Package className="text-white" size={24} />
           </div>
@@ -114,13 +114,13 @@ export default function ProductInfo({ product }: ProductInfoProps) {
             </p>
           </div>
         </div>
-        <div className="flex items-center gap-3 p-4 bg-orange-50 rounded-xl border border-orange-200">
+        <div className="flex flex-wrap items-center gap-3 p-4 bg-orange-50 rounded-xl border border-orange-200">
           <div className="bg-orange-500 p-2 rounded-lg">
             <TrendingUp className="text-white" size={24} />
           </div>
-          <div className="overflow-hidden">
+          <div>
             <p className="text-xs text-gray-600 font-medium">Total Sold</p>
-            <p className="text-lg font-bold text-orange-700">
+            <p className="text-lg font-bold text-orange-700 flex flex-wrap">
               {product.sold && product.sold.toString().includes("e+")
                 ? Math.floor(
                     product.sold
@@ -128,11 +128,11 @@ export default function ProductInfo({ product }: ProductInfoProps) {
                       .split("e+")
                       .reduce(
                         (a: number, b: number) => Number(a) + Number(b),
-                        0
-                      )
+                        0,
+                      ),
                   )
                 : product.sold || 0}
-              units
+              <span className="pl-1">{product.sold <= 1 ? "unit" : "units"}</span>
             </p>
           </div>
         </div>
